@@ -1,0 +1,53 @@
+//Problem 1
+ALGORITHM sumOfDistinctNumbers
+VAR
+    sum :FLOAT
+    firstArray : ARRAY_OF FLOAT[x];
+    secondArray : ARRAY_OF FLOAT[y];
+BEGIN
+    sum:=0
+    FOR i FROM 0 TO Length(firstArray) STEP 1  DO 
+        sum := sum + firstArray[i]
+        IF (firstArray[i] != secondArray[i]) THEN //Here we compare the values in firstArray with secondArray if they r not equal we add it to the sum
+                sum := sum + secondArray[i]
+        END_IF
+    END_FOR
+    //If the length of the firstArray is lower than the second then we need to add the other elements to the sum
+    IF (Length(firstArray)<Length(secondArray)) THEN
+        FOR i FROM Length(firstArray) TO Length(secondArray) STEP 1  DO
+            sum := sum + secondArray[i]
+        END_FOR
+    END_IF
+END
+//Problem 2
+FUNCTION dot_product(v1: ARRAY_OF FLOAT[n], v2: ARRAY_OF FLOAT[n]) RETURNS FLOAT
+VAR
+    ps: FLOAT
+    i: INTEGER
+BEGIN
+    ps := 0;
+    FOR i FROM 0 TO n - 1 STEP 1 DO
+        ps := ps + v1[i] * v2[i];
+    END_FOR;
+    RETURN ps;
+END
+
+ALGORITHM CheckOrthogonality
+VAR
+    n: INTEGER
+    v1: ARRAY_OF FLOAT[n]
+    v2: ARRAY_OF FLOAT[n]
+    ps: FLOAT
+    i, j: INTEGER
+BEGIN
+        ps := dot_product(v1, v2);
+
+        IF (ps = 0) THEN
+            // Vectors are orthogonal
+            OUTPUT "Vectors are orthogonal";
+        ELSE
+            // Vectors are not orthogonal
+            OUTPUT "Vectors are not orthogonal";
+        END_IF;
+    END_FOR;
+END

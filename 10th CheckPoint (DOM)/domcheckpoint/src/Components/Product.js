@@ -1,4 +1,3 @@
-// Product.js
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -56,7 +55,7 @@ const Product = ({
       });
     }
   };
-  
+
   const handleAddToCart = () => {
     // Check if quantity is greater than 0 before adding to the cart
     if (quantity > 0) {

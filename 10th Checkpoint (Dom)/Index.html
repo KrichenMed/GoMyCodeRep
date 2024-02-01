@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" style="display: flex; align-items: center;">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-shopping-cart-442-1151214.png?f=webp&w=256"
+                    alt="Shopping Cart Logo" style="width: 30px; margin-right: 10px;">
+                Shopping Cart Tunisia
+            </a>
+        </div>
+    </nav>
+    <div class="cart-container">
+        <div class="item">
+            <img src="https://www.delice.tn/wp-content/uploads/2020/11/lait-demi-ecreme.png" alt="Lait">
+            <div class="item-details">
+                <h3>Lait Délice</h3>
+                <p class="price">$1.00</p>
+            </div>
+        </div>
+        <div class="quantity">
+            <button class="btn-minus">-</button>
+            <span class="quantity-value">1</span>
+            <button class="btn-plus">+</button>
+        </div>
+        <button class="btn-delete" aria-label="Delete">&#128465;</button>
+        <button class="btn-like">&#10084; Like</button>
+    </div>
+    </div>
+    <div class="cart-container">
+        <div class="item">
+            <img src="https://www.delice.tn/wp-content/uploads/2020/11/lait-demi-ecreme.png" alt="Lait">
+            <div class="item-details">
+                <h3>Lait Délice</h3>
+                <p class="price">$1.00</p>
+            </div>
+        </div>
+        <div class="quantity">
+            <button class="btn-minus">-</button>
+            <span class="quantity-value">1</span>
+            <button class="btn-plus">+</button>
+        </div>
+        <button class="btn-delete" aria-label="Delete">&#128465;</button>
+        <button class="btn-like">&#10084; Like</button>
+    </div>
+    </div>
+    <div class="total">
+        <p>Total: <span id="total-price">$0.00</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

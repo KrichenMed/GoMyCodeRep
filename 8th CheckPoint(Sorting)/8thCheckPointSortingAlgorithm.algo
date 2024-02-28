@@ -1,0 +1,16 @@
+ALGORITHM newSortingAlgorithm
+VAR
+    arr : ARRAY_OF INTEGER[n];
+    i, j: INTEGER; // 2 counters
+BEGIN
+    i:= 0; //Example of array [12, 11, 13, 5, 6]
+    FOR i FROM 1 TO n STEP 1  DO
+        indexVal := arr[i] // we will use this to store the data in the index i (indexVal = 11)
+        j := i -1;
+        WHILE (j>= 0 && indexVal < arr[j]) DO // while we are in index 1 and the index value is lower than the value of arr[j]
+            arr[j+1] := arr[j]; // we send the lower value to be the first (we send [12] to the right) 
+            j:= j-1; // incrementation
+        END_WHILE
+        arr[j+1]:= indexVal; // inserting the index value to the correct position  
+    END_FOR
+END
